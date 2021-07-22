@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link href="styles/styles.css" rel="stylesheet" type="text/css">
 	<head>
+	
 		<meta charset="ISO-8859-1">
 			<title>OrganicApp</title>
-				<style type="text/css">
- 					 body {
-   			 		color: purple;
-   					 background-color: rgb(255, 0, 0) }
-  				</style>
+				
+  	</head>
+	<body background="https://www.infocampo.com.ar/wp-content/uploads/2020/02/huerta-acelga-2-infocampo.jpg">
+		<h1 align = "center"> OrganicApp </h1>
+			<a th:href = "@{/productos/comprar}">comprarProductos</a> 
+			<a th:href = "@{/IniciarSesion}">Iniciar sesion</a>
+		<p> Hola esta es mi app </p>
 	
-	</head>
-<body background="https://www.infocampo.com.ar/wp-content/uploads/2020/02/huerta-acelga-2-infocampo.jpg">
-	<h1> OrganicApp </h1>
-	<a th:href = "@{/verProducto}">Ver Productos</a> 
-</body>
+	</body>
 </html>
