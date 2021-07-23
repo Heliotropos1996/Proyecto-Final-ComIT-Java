@@ -20,8 +20,8 @@ private static final long serialVersionUID = 1L;
 	
 	private Long id;
 	private String nombre;
-	private String dni;
-	private String correo;
+	private String dirección;
+	private String contacto;
 	
 	public String getNombre() {
 		return nombre;
@@ -29,20 +29,21 @@ private static final long serialVersionUID = 1L;
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getDni() {
-		return dni;
-	}
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
-	public String getCorreo() {
-		return correo;
-	}
-	public void setCorreo(String correo) {
-		this.correo = correo;
-	}
+
 	public Long getId() {
 		return id;
+	}
+	public String getDirección() {
+		return dirección;
+	}
+	public void setDirección(String dirección) {
+		this.dirección = dirección;
+	}
+	public String getContacto() {
+		return contacto;
+	}
+	public void setContacto(String contacto) {
+		this.contacto = contacto;
 	}
 	}
 	

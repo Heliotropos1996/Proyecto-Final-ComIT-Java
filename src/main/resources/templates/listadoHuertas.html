@@ -8,11 +8,11 @@
 	<h1> Huertas </h1> 
 	<TABLE BORDER>
 	<TR>
-		<TD>ID</TD> <TD>Nombre</TD> <TD>Correo</TD>
+		<TD>ID</TD> <TD>Nombre</TD> <TD>Contacto</TD>
 	</TR>
 	
 	<TR th:each = "cliente: ${huertas}">
-		<TD th:text = "${huertas.id}"></TD> <TD th:text = "${huertas.nombre}"></TD> <TD th:text = "${huertas.correo}"></TD>
+		<TD th:text = "${huertas.id}"></TD> <TD th:text = "${huertas.nombre}"></TD> <TD th:text = "${huertas.contacto}"></TD>
 	</TR>
 </TABLE>
 	
