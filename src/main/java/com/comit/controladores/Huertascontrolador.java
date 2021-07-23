@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.comit.repositorios.HuertasRepositorio;
-import com.comit.repositorios.VendedorRepositorio;
+
 
 @Controller
 @RequestMapping ("/huertas")
