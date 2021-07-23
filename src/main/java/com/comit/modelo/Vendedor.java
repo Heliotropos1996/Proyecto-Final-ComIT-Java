@@ -1,4 +1,4 @@
-package com.comit;
+package com.comit.modelo;
 
 import java.io.Serializable;
 
@@ -10,10 +10,9 @@ import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 @Entity
-@Getter
-@Setter
 
-public class Cliente implements Serializable {
+
+public class Vendedor implements Serializable {
 	
 private static final long serialVersionUID = 1L;
 	@Id
@@ -42,7 +41,9 @@ private static final long serialVersionUID = 1L;
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-	
+	public Long getId() {
+		return id;
+	}
 	}
 	
 	

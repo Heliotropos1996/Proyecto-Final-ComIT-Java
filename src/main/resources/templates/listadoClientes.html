@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> Clientes </h1> 
+	<TABLE BORDER>
+	<TR>
+		<TD>ID</TD> <TD>Nombre</TD> <TD>Correo</TD>
+	</TR>
+	
+	<TR th:each = "cliente: ${clientes}">
+		<TD th:text = "${cliente.id}"></TD> <TD th:text = "${cliente.nombre}"></TD> <TD th:text = "${cliente.correo}"></TD>
+	</TR>
+</TABLE>
+	
+</body>
+</html>
