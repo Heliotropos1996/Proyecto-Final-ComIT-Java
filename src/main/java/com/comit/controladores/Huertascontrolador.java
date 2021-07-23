@@ -6,17 +6,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.comit.repositorios.HuertasRepositorio;
 import com.comit.repositorios.VendedorRepositorio;
 
 @Controller
-@RequestMapping ("/clientes")
-public class Clientecontrolador {
+@RequestMapping ("/huertas")
+public class Huertascontrolador {
 @Autowired	
- private VendedorRepositorio clienteRepositorio;
+ private HuertasRepositorio huertasRepositorio;
 @GetMapping
 public String listarClientes(Model model) { 
-	 model.addAttribute("clientes", clienteRepositorio.findAll());
-	 return "listadoClientes";
+	 model.addAttribute("huertas", huertasRepositorio.findAll());
+	 return "listadoHuertas";
 	 
  }
 }

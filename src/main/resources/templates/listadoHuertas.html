@@ -5,14 +5,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> Clientes </h1> 
+	<h1> Huertas </h1> 
 	<TABLE BORDER>
 	<TR>
 		<TD>ID</TD> <TD>Nombre</TD> <TD>Correo</TD>
 	</TR>
 	
-	<TR th:each = "cliente: ${clientes}">
-		<TD th:text = "${cliente.id}"></TD> <TD th:text = "${cliente.nombre}"></TD> <TD th:text = "${cliente.correo}"></TD>
+	<TR th:each = "cliente: ${huertas}">
+		<TD th:text = "${huertas.id}"></TD> <TD th:text = "${huertas.nombre}"></TD> <TD th:text = "${huertas.correo}"></TD>
 	</TR>
 </TABLE>
 	

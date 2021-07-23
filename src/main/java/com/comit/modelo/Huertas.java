@@ -12,7 +12,7 @@ import lombok.Setter;
 @Entity
 
 
-public class Vendedor implements Serializable {
+public class Huertas implements Serializable {
 	
 private static final long serialVersionUID = 1L;
 	@Id
