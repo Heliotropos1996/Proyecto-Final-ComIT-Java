@@ -9,19 +9,21 @@ import javax.persistence.Id;
 
 import lombok.Getter;
 import lombok.Setter;
+
+
 @Entity
-
-
-public class Huertas implements Serializable {
+public class Huerta implements Serializable {
 	
 private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	private Long id;
 	private String nombre;
-	private String dirección;
+	private String direccion;
 	private String contacto;
+	private Boolean borrado = false;
 	
 	public String getNombre() {
 		return nombre;
@@ -33,17 +35,23 @@ private static final long serialVersionUID = 1L;
 	public Long getId() {
 		return id;
 	}
-	public String getDirección() {
-		return dirección;
+	public String getDireccion() {
+		return direccion;
 	}
-	public void setDirección(String dirección) {
-		this.dirección = dirección;
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 	public String getContacto() {
 		return contacto;
 	}
 	public void setContacto(String contacto) {
 		this.contacto = contacto;
+	}
+	public Boolean getBorrado() {
+		return borrado;
+	}
+	public void setBorrado(Boolean borrado) {
+		this.borrado = borrado;
 	}
 	}
 	

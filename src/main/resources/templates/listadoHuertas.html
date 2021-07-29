@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+<head> <link th:href="@{/styles/style.css}" rel="stylesheet"/>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Listado huertas</title>
 </head>
-<body>
-	<h1> Huertas </h1> 
-	<TABLE BORDER>
+<body background="/imagenes/Swiss_Chard_Rainbow.jpg" class="fondo"/>
+<body> 
+	<div>
+		<h1> Huertas Activas</h1> 
+	</div>
+	<TABLE BORDER th:if="!${huertas.isEmpty()}">
 	<TR>
-		<TD>ID</TD> <TD>Nombre</TD> <TD>Contacto</TD>
+		<TD>ID</TD>
+		<TD>Nombre</TD>
+		<TD>Contacto</TD>
+		<TD></TD>
+		<TD></TD>
 	</TR>
-	
-	<TR th:each = "cliente: ${huertas}">
-		<TD th:text = "${huertas.id}"></TD> <TD th:text = "${huertas.nombre}"></TD> <TD th:text = "${huertas.contacto}"></TD>
+	<TR th:each = "huerta: ${huertas}">
+		<TD th:text = "${huerta.id}"></TD>
+		<TD th:text = "${huerta.nombre}"></TD>
+		<TD th:text = "${huerta.contacto}"></TD>
+		<td><a th:href="@{|/huertas/${huerta.id}|}">Actualizar</a></td>
+		<TD>
+				<form th:action="@{|/huertas/${huerta.id}/borrar|}" th:method="delete">
+					<button type="submit">Borrar</button>
+				</form>
+		</TD>
 	</TR>
 </TABLE>
-	
+<a th:href="@{/huertas/nueva} ">Crear nueva huerta</a>
+<br /> <div>
+	<h1> Huertas Borradas</h1> 
+ 	  </div>
+	<TABLE BORDER th:if="!${huertasBorradas.isEmpty()}">
+	<TR>
+		<TD>ID</TD>
+		<TD>Nombre</TD>
+		<TD>Contacto</TD>
+		<TD></TD>
+		<TD></TD>
+	</TR>
+	<TR th:each = "huerta: ${huertasBorradas}">
+		<TD th:text = "${huerta.id}"></TD>
+		<TD th:text = "${huerta.nombre}"></TD>
+		<TD th:text = "${huerta.contacto}"></TD>
+		<td><a th:href="@{|/huertas/${huerta.id}/mostrar|}">Mostrar</a></td>
+	</TR>
+</TABLE>
 </body>
 </html>

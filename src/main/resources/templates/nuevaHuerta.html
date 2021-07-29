@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head> <link th:href="@{/styles/style.css}" rel="stylesheet"/>
+<body background="/imagenes/Swiss_Chard_Rainbow.jpg" class="fondo"/>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form th:action="@{/huertas/crear}" method="post" th:object=${huerta}>
+		<input type="text" name="nombre" th:field="*{nombre}" placeholder="Nombre..."><br />
+		<input type="text" name="direccion" th:field="*{direccion}"  placeholder="Dirección..."><br />
+		<input type="text" name="contacto" th:field="*{contacto}"  placeholder="Contacto..."><br />
+		<button type="submit" >Guardar</button>
+	</form>
+</body>
+</html>

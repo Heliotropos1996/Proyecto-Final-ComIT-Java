@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<link href="styles/styles.css" rel="stylesheet" type="text/css">
-	<head>
-	
+
+	<head> <link th:href="@{/styles/style.css}" rel="stylesheet"/>
 		<meta charset="ISO-8859-1">
 			<title>OrganicApp</title>
 				
   	</head>
-	<body background="https://www.infocampo.com.ar/wp-content/uploads/2020/02/huerta-acelga-2-infocampo.jpg">
-		<h1 align = "center"> OrganicApp </h1>
-			<a th:href = "@{/productos/comprar}">ComprarProductos</a> 
+	<body background="/imagenes/Swiss_Chard_Rainbow.jpg" class="fondo"/>
+
+		<h1> <img src="/imagenes/Fiebre (2).png" alt="OrganicApp" name="OrganicApp" /> </h1>
+			<a th:href = "@{/productos/comprar}">Comprar Productos</a> 
 			<a th:href = "@{/IniciarSesion}">Iniciar sesion</a>
 			<a th:href = "@{/huertas}">Ver Huertas</a>
-		<p> Hola esta es mi app </p>
+		<p> </p>
 	
 	</body>
 </html>

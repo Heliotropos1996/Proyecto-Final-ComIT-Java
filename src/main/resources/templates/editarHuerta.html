@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Editar la huerta ID <span th:text="${huerta.id}"></span></h1>
+	<form th:action="@{|/huertas/${huerta.id}|}" th:method="post" th:object=${huerta}>
+		<input type="text" name="nombre" th:field="*{nombre}" placeholder="Nombre..."><br />
+		<input type="text" name="direccion" th:field="*{direccion}"  placeholder="Dirección..."><br />
+		<input type="text" name="contacto" th:field="*{contacto}"  placeholder="Contacto..."><br />
+		<button type="submit" >Guardar</button>
+	</form>
+</body>
+</html>
