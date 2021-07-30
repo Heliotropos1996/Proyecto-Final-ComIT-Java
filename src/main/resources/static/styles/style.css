@@ -71,7 +71,7 @@ li:last-child a {
 }
 
 a:link, a:visited, a:focus {
-  background: yellow;
+  background: #00ffff;
 }
 
 a:hover {
@@ -93,7 +93,10 @@ h1 img {
      height: 50vh;
      width: 30vw;
 }
- 
+ .division {
+  height: 350px;
+  background-color: #ffffff70;
+ }
  .fondo{
  background-repeat: repeat;
  text-align:center;
@@ -104,5 +107,5 @@ h1 img {
  	  text-align: center;
    
       height: 50px;
-      background-color: #7aff00b8; 
+      background-color: #b7ff76c7; 
     }

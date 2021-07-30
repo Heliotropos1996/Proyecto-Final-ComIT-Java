@@ -14,13 +14,14 @@
 		<TD>ID</TD>
 		<TD>Nombre</TD>
 		<TD>Contacto</TD>
-		<TD></TD>
+		<TD>Direccion</TD>
 		<TD></TD>
 	</TR>
 	<TR th:each = "huerta: ${huertas}">
 		<TD th:text = "${huerta.id}"></TD>
 		<TD th:text = "${huerta.nombre}"></TD>
 		<TD th:text = "${huerta.contacto}"></TD>
+		<TD th:text = "${huerta.direccion}"></TD>
 		<td><a th:href="@{|/huertas/${huerta.id}|}">Actualizar</a></td>
 		<TD>
 				<form th:action="@{|/huertas/${huerta.id}/borrar|}" th:method="delete">
@@ -30,6 +31,7 @@
 	</TR>
 </TABLE>
 <a th:href="@{/huertas/nueva} ">Crear nueva huerta</a>
+
 <br /> <div>
 	<h1> Huertas Borradas</h1> 
  	  </div>
@@ -38,13 +40,14 @@
 		<TD>ID</TD>
 		<TD>Nombre</TD>
 		<TD>Contacto</TD>
-		<TD></TD>
+		<TD>Direccion</TD>
 		<TD></TD>
 	</TR>
 	<TR th:each = "huerta: ${huertasBorradas}">
 		<TD th:text = "${huerta.id}"></TD>
 		<TD th:text = "${huerta.nombre}"></TD>
 		<TD th:text = "${huerta.contacto}"></TD>
+		<TD th:text = "${huerta.direccion}"></TD>
 		<td><a th:href="@{|/huertas/${huerta.id}/mostrar|}">Mostrar</a></td>
 	</TR>
 </TABLE>

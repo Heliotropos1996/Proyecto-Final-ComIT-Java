@@ -3,16 +3,20 @@
 
 	<head> <link th:href="@{/styles/style.css}" rel="stylesheet"/>
 		<meta charset="ISO-8859-1">
-			<title>OrganicApp</title>
+	<title>OrganicApp</title>
 				
   	</head>
 	<body background="/imagenes/Swiss_Chard_Rainbow.jpg" class="fondo"/>
 
-		<h1> <img src="/imagenes/Fiebre (2).png" alt="OrganicApp" name="OrganicApp" /> </h1>
+	<div class="division">	<h1> <img src="/imagenes/Fiebre (2).png" alt="OrganicApp" name="OrganicApp" /> </h1> 
 			<a th:href = "@{/productos/comprar}">Comprar Productos</a> 
 			<a th:href = "@{/IniciarSesion}">Iniciar sesion</a>
 			<a th:href = "@{/huertas}">Ver Huertas</a>
-		<p> </p>
+			<a th:href = "@{/info/quienesSomos}">Quienes somos</a>
+			
+			 </div>
+		
+
 	
 	</body>
 </html>
