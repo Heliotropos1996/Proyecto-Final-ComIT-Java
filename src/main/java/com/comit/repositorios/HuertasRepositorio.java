@@ -8,7 +8,7 @@ import com.comit.modelo.Huerta;
 
 @Repository
 public interface HuertasRepositorio extends JpaRepository<Huerta, Long>{
-	// select * from huerta where borrado=:borrado
+
 		List<Huerta> findByBorrado(Boolean borrado);
 }
 
