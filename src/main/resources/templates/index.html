@@ -6,7 +6,9 @@
 	<title>OrganicApp</title>
 				
   	</head>
-  	<script type="text/javascript" src="js/saludo.js"></script>
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  
+		
 	<body background="/imagenes/Swiss_Chard_Rainbow.jpg" class="fondo"/>
 
 	<div class="division">	<h1> <img src="/imagenes/Fiebre (2).png" alt="OrganicApp" name="OrganicApp" /> </h1> 
@@ -16,8 +18,27 @@
 			<a th:href = "@{/info/quienesSomos}">Quienes somos</a>
 			
 			 </div>
+			
 		
+			<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Direccion de email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+  </div>
+  <div class="mb-2">
+    <label for="exampleInputPassword1" class="form-label">Contrasena</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-1">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+			
 
 	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 	</body>
 </html>
