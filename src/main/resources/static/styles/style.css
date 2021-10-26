@@ -1,87 +1,14 @@
 @charset "ISO-8859-1";
-p {
-  color: red;
-  width: 500px;
-  border: 1px solid black;
-}
-table {
-	background: red;
-  width: 100%;
-   border: 1px solid #000;
-}
-th, td {
-   width: 25%;
-   text-align: left;
-   vertical-align: top;
-   border: 1px solid #000;
-   border-collapse: collapse;
-   padding: 0.3em;
-   caption-side: bottom;
-}
+
+
+
 caption {
    padding: 0.3em;
    color: #fff;
     background: #000;
 }
-th {
-   background: #eee;
-}
 
-thead th:nth-child(1) {
-  width: 30%;
-}
 
-thead th:nth-child(2) {
-  width: 20%;
-}
-
-thead th:nth-child(3) {
-  width: 15%;
-}
-
-thead th:nth-child(4) {
-  width: 35%;
-}
-
-th, td {
-  padding: 20px;
-}
-ul {
-  padding: 0;
-  width: 100%;
-}
-
-li {
-  display: inline;
-}
-
-a {
-  outline: none;
-  text-decoration: none;
-  display: inline-block;
-  width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
-}
-
-li:last-child a {
-  margin-right: 0;
-}
-
-a:link, a:visited, a:focus {
-  background: #00ffff;
-}
-
-a:hover {
-  background: orange;
-}
-
-a:active {
-  background: red;
-  color: white;
-}
 
 h1 { font-family: "Segoe UI";
      color: #000;
@@ -89,46 +16,15 @@ h1 { font-family: "Segoe UI";
      text-align: center;
 }
 
-h1 img {
-     height: 50vh;
-     width: 30vw;
+
+
+ .carousel-inner{
+    height: 650px;
+    margin-top: 55px;
+   }
+   .container{
+    margin-top: 80px;
 }
- .division {
-  height: 350px;
-  background-color: #ffffff70;
- }
- .fondo{
- background-repeat: repeat;
- text-align:center;
- height: 75vh;
- width: 100vw; }
-
- .mb-3{ 
- 	
-	 width: 10cm;
- 	margin:100px;     
- 		height: 50px;
-      background-color: #b7ff76c7; 
-      margin-left: auto;
-      margin-right: auto;
- }
- .mb-2 {
-
-
- width: 10cm;
- 	margin:50px;     
- 		height: 50px;
-      background-color: #b7ff76c7; 
-      margin-left: auto;
-      margin-right: auto;
- }
- .mb-1{
- 
- width: 5cm;
- 	margin:50px;     
- 		height: 30px;
-      background-color: #b7ff76c7; 
-      margin-left: auto;
-      margin-right: auto;
-
- }
+.HA{
+	margin-top: 70px;
+}

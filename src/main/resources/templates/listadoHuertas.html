@@ -1,55 +1,114 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head> <link th:href="@{/styles/style.css}" rel="stylesheet"/>
+<head>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+	crossorigin="anonymous">
+<link th:href="@{/styles/style.css}" rel="stylesheet" />
 <meta charset="ISO-8859-1">
 <title>Listado huertas</title>
 </head>
-<body background="/imagenes/Swiss_Chard_Rainbow.jpg" class="fondo"/>
-<body> 
-	<div>
-		<h1> Huertas Activas</h1> 
-	</div>
-	<TABLE BORDER th:if="!${huertas.isEmpty()}">
-	<TR>
-		<TD>ID</TD>
-		<TD>Nombre</TD>
-		<TD>Contacto</TD>
-		<TD>Direccion</TD>
-		<TD></TD>
-	</TR>
-	<TR th:each = "huerta: ${huertas}">
-		<TD th:text = "${huerta.id}"></TD>
-		<TD th:text = "${huerta.nombre}"></TD>
-		<TD th:text = "${huerta.contacto}"></TD>
-		<TD th:text = "${huerta.direccion}"></TD>
-		<td><a th:href="@{|/huertas/${huerta.id}|}">Actualizar</a></td>
-		<TD>
-				<form th:action="@{|/huertas/${huerta.id}/borrar|}" th:method="delete">
-					<button type="submit">Borrar</button>
-				</form>
-		</TD>
-	</TR>
-</TABLE>
-<a th:href="@{/huertas/nueva} ">Crear nueva huerta</a>
 
-<br /> <div>
-	<h1> Huertas Borradas</h1> 
- 	  </div>
-	<TABLE BORDER th:if="!${huertasBorradas.isEmpty()}">
-	<TR>
-		<TD>ID</TD>
-		<TD>Nombre</TD>
-		<TD>Contacto</TD>
-		<TD>Direccion</TD>
-		<TD></TD>
-	</TR>
-	<TR th:each = "huerta: ${huertasBorradas}">
-		<TD th:text = "${huerta.id}"></TD>
-		<TD th:text = "${huerta.nombre}"></TD>
-		<TD th:text = "${huerta.contacto}"></TD>
-		<TD th:text = "${huerta.direccion}"></TD>
-		<td><a th:href="@{|/huertas/${huerta.id}/mostrar|}">Mostrar</a></td>
-	</TR>
-</TABLE>
+<body>
+	<header>
+		<section>
+			<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="">OrganicApp</a>
+					<button class="navbar-toggler" type="button"
+						data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item"><a class="nav-link active"
+								aria-current="page" th:href="@{/huertas}">Huertas</a></li>
+							<li class="nav-item"><a th:href="@{/productos/comprar}"
+								class="nav-link">Comprar productos</a></li>
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+								role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Dropdown </a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item"
+										th:href="@{/info/quienesSomos}">Quienes somos</a></li>
+									<li><a class="dropdown-item" href="#">Another action</a></li>
+									<li><hr class="dropdown-divider"></li>
+									<li><a class="dropdown-item" href="#">Something else
+											here</a></li>
+								</ul></li>
+							<li class="nav-item"><a class="nav-link active"
+								th:href="@{/IniciarSesion}">Iniciar Sesion</a></li>
+						</ul>
+						<form class="d-flex">
+							<input class="form-control me-2" type="search"
+								placeholder="Search" aria-label="Search">
+							<button class="btn btn-outline-success" type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+			</nav>
+		</section>
+		<div>
+			<h1 class="HA">Huertas Activas</h1>
+		</div>
+		
+		<table BORDER th:if="!${huertas.isEmpty()}" class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Contacto</th>
+      <th scope="col">Direccion</th>
+    </tr>
+  </thead>
+  <tbody>
+   <TR th:each="huerta: ${huertas}">
+				<TD th:text="${huerta.id}"></TD>
+				<TD th:text="${huerta.nombre}"></TD>
+				<TD th:text="${huerta.contacto}"></TD>
+				<TD th:text="${huerta.direccion}"></TD>
+				<td><a th:href="@{|/huertas/${huerta.id}|}">Actualizar</a></td>
+				<TD>
+					<form th:action="@{|/huertas/${huerta.id}/borrar|}"
+						th:method="delete">
+						<button type="submit">Borrar</button>
+					</form>
+				</TD>
+			</TR>
+    
+  
+  </tbody>
+</table>
+		<a th:href="@{/huertas/nueva} ">Crear nueva huerta</a>
+
+		<div>
+			<h1>Huertas Borradas</h1>
+		</div>
+		<TABLE BORDER th:if="!${huertasBorradas.isEmpty()}" class="table table-dark table-striped">
+		<thead>
+			<TR>
+				<TD>ID</TD>
+				<TD>Nombre</TD>
+				<TD>Contacto</TD>
+				<TD>Direccion</TD>
+				<TD></TD>
+			</TR>
+			</thead>
+			<tbody>
+			<TR th:each="huerta: ${huertasBorradas}">
+				<TD th:text="${huerta.id}"></TD>
+				<TD th:text="${huerta.nombre}"></TD>
+				<TD th:text="${huerta.contacto}"></TD>
+				<TD th:text="${huerta.direccion}"></TD>
+				<td><a th:href="@{|/huertas/${huerta.id}/mostrar|}">Mostrar</a></td>
+			</TR>
+			</tbody>
+		</TABLE>
+	</header>
 </body>
 </html>

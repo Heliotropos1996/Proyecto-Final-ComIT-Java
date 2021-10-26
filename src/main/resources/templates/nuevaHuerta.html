@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head> <link th:href="@{/styles/style.css}" rel="stylesheet"/>
+<head> 
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+	crossorigin="anonymous">
+<link th:href="@{/styles/style.css}" rel="stylesheet"/>
 <body background="/imagenes/Swiss_Chard_Rainbow.jpg" class="fondo"/>
 <meta charset="UTF-8">
 <title>Crear huerta</title>
 </head>
 <body>
+<nav
+		class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/huertas}">Huertas</a></li>
+					<li class="nav-item"><a th:href="@{/productos/comprar}"
+						class="nav-link">Comprar productos</a></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Dropdown </a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" th:href="@{/info/quienesSomos}">Quienes somos</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Something else
+									here</a></li>
+						</ul></li>
+					<li class="nav-item"><a class="nav-link active" th:href="@{/IniciarSesion}">Iniciar Sesion</a>
+					</li>
+				</ul>
+				<form class="d-flex">
+					<input class="form-control me-2" type="search" placeholder="Search"
+						aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
 
-	<form th:action="@{/huertas/crear}" method="post" th:object=${huerta}>
+	<form class="HA" th:action="@{/huertas/crear}" method="post" th:object=${huerta}>
 		<input type="text" name="nombre" th:field="*{nombre}" placeholder="Nombre..."><br />
 		<input type="text" name="direccion" th:field="*{direccion}"  placeholder="Dirección..."><br />
 		<input type="text" name="contacto" th:field="*{contacto}"  placeholder="Contacto..."><br />
